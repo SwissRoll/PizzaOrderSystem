@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane prefHeight="371.0" prefWidth="725.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXMLController">
+   <columnConstraints>
+      <ColumnConstraints minWidth="-Infinity" prefWidth="243.0" />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin>
+         <children>
+            <TextArea fx:id="orderOutput" editable="false" focusTraversable="false" prefHeight="202.0" promptText="Your orders will appear here..." AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="clearOrders" focusTraversable="false" layoutX="381.0" layoutY="202.0" mnemonicParsing="false" onAction="#clearOrdersAction" text="Clear Orders" AnchorPane.topAnchor="207.0" />
+         </children>
+      </AnchorPane>
+      <VBox GridPane.rowIndex="1">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label minHeight="-Infinity" prefHeight="27.0" text="Size:" GridPane.halignment="RIGHT">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label minHeight="-Infinity" prefHeight="27.0" text="Cheese:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label minHeight="-Infinity" prefHeight="27.0" text="Pepperoni:" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label minHeight="-Infinity" prefHeight="27.0" text="Mushrooms:" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <ChoiceBox fx:id="choiceBoxSize" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="choiceBoxCheese" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="10.0" top="5.0" />
+                     </GridPane.margin>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="choiceBoxPepperoni" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="10.0" top="5.0" />
+                     </GridPane.margin>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="choiceBoxMushrooms" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="10.0" top="5.0" />
+                     </GridPane.margin>
+                  </ChoiceBox>
+                  <Label text="How many?" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                  <TextField fx:id="pizzaNumber" maxWidth="-Infinity" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="Pizza price:" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+                  <Label fx:id="price" text="\$0.00" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Line item price:" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+                  <Label fx:id="totalPrice" text="\$0.00" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <Label fx:id="description" contentDisplay="CENTER" prefHeight="47.0" prefWidth="728.0" text="Welcome to Declan's pizza ordering GUI!&#10;Special deal! 10% off an order of 10-20 pizzas and 15% off over 20 pizzas!" wrapText="true" GridPane.columnSpan="2">
+         <GridPane.margin>
+            <Insets bottom="15.0" />
+         </GridPane.margin>
+      </Label>
+      <Button fx:id="orderButton" defaultButton="true" disable="true" focusTraversable="false" mnemonicParsing="false" onAction="#placeOrder" text="Place Order" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Button fx:id="exitButton" cancelButton="true" focusTraversable="false" mnemonicParsing="false" onAction="#closeButtonAction" text="Quit" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+</GridPane>

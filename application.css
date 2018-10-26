@@ -1,0 +1,89 @@
+.root {
+	-fx-vgap: 10px;
+	-fx-hgap: 10px;
+	-fx-grid-lines-visible: false;
+	-fx-padding: 10px 20px 10px 20px;
+	-fx-alignment: top-center
+}
+.button {
+	-fx-font-size: 18px;
+	-fx-text-fill: black;
+	-fx-font-weight: bold;
+}
+.label {
+	-fx-font-family: "Consolas";
+	-fx-font-size: 13px;
+}
+#backgroundAnchor{
+	-fx-background-color: rgb(243,243,243)
+}
+#description {
+	-fx-font-family: "Times New Roman";
+	-fx-font-size: 16px;
+}
+#orderButton {
+	 -fx-background-color: 
+        linear-gradient(#ffd65b, #e68400),
+        linear-gradient(#ffef84, #f2ba44),
+        linear-gradient(#ffea6a, #efaa22),
+        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #654b00;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-padding: 10 20 10 20;
+}
+#orderButton:hover {
+	-fx-background-color: 
+        linear-gradient(#e68400, #ffd65b),
+        linear-gradient(#f2ba44, #ffef84),
+        linear-gradient(#efaa22, #ffea6a),
+        linear-gradient(#eea10b 0%, #f8c202 30%, #ffe657 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+}
+#orderButton:pressed {
+	 -fx-background-color: 
+        linear-gradient(#ffd65b, #e68400),
+        linear-gradient(#ffef84, #f2ba44),
+        linear-gradient(#ffea6a, #efaa22),
+        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+}
+#exitButton {
+	-fx-background-color: linear-gradient(#ff5400, #be1d00);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-font-size: 10px;
+    -fx-text-fill: white;
+}
+#exitButton:hover {
+	-fx-background-color: linear-gradient(#be1d00, #ff5400);
+}
+#exitButton:pressed {
+	-fx-background-color: linear-gradient(#ff5400, #be1d00);
+}
+#clearOrders {
+	-fx-background-color: 
+        linear-gradient(#f2f2f2, #d6d6d6),
+        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),
+        linear-gradient(#dddddd 0%, #f6f6f6 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-font-size: 12px;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+#clearOrders:hover {
+	-fx-background-color: 
+        linear-gradient(#d6d6d6, #f2f2f2),
+        linear-gradient(#d6d6d6 0%, #d9d9d9 20%, #fcfcfc 100%),
+        linear-gradient(#f6f6f6 0%, #dddddd 50%);
+}
+#clearOrders:pressed {
+	-fx-background-color: 
+        linear-gradient(#f2f2f2, #d6d6d6),
+        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),
+        linear-gradient(#dddddd 0%, #f6f6f6 50%);
+}
